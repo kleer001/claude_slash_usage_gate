@@ -1,0 +1,17 @@
+{
+  "name": "usage-gate",
+  "owner": {
+    "name": "kleer001"
+  },
+  "metadata": {
+    "description": "Usage gate for Claude Code — soft nudge / hard block on the 5-hour rate-limit window",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "usage",
+      "source": "./",
+      "description": "Report Claude.ai rate-limit usage and gate work (soft nudge + hard block) on the 5-hour window."
+    }
+  ]
+}

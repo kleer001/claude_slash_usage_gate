@@ -1,0 +1,12 @@
+{
+  "name": "usage",
+  "description": "Watch Claude.ai rate-limit usage and gate work on the 5-hour window: a soft 'wrap up' nudge and a hard tool-call block. Provides /usage:check to report usage and control the gate.",
+  "version": "0.1.0",
+  "author": {
+    "name": "kleer001"
+  },
+  "homepage": "https://github.com/kleer001/claude_slash_usage_gate",
+  "repository": "https://github.com/kleer001/claude_slash_usage_gate",
+  "license": "MIT",
+  "keywords": ["usage", "rate-limit", "gate", "hooks", "claude-code"]
+}

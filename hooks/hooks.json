@@ -1,0 +1,28 @@
+{
+  "description": "Usage gate — soft 'wrap up' nudge and hard tool-call block based on the 5-hour rate-limit window. PreToolUse reads a cached percentage; PostToolUse refreshes that cache from the OAuth usage API at most once per TTL.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/gate.sh\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/refresh.sh\"",
+            "async": true,
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
