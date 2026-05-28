@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/gate.sh\"",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/gate.sh\" \"${CLAUDE_PROJECT_DIR}\"",
             "timeout": 5
           }
         ]
